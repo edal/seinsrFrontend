@@ -4,5 +4,5 @@
         'ui.bootstrap',
         'pascalprecht.translate',
         'ngCookies',
-    ])
+    ]);
 })();

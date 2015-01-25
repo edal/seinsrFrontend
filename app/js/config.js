@@ -4,7 +4,7 @@
  * Initial there are written stat for all view in theme.
  *
  */
-function config($stateProvider, $urlRouterProvider) {
+function config($stateProvider, $urlRouterProvider, $translateProvider) {
     $urlRouterProvider.otherwise("/main");
     $stateProvider
         .state('main', {
@@ -16,11 +16,20 @@ function config($stateProvider, $urlRouterProvider) {
             url: "/minor",
             templateUrl: "views/minor.html",
             data: { pageTitle: 'Example view' }
-        })
+        });
+    // Initialize angular-translate
+    $translateProvider.useStaticFilesLoader({
+        prefix: 'i18n/',
+        suffix: '.json'
+    });
+
+    $translateProvider.preferredLanguage('es');
+
+    $translateProvider.useCookieStorage(); 
 }
 angular
     .module('seinsr')
-    .config(['$stateProvider', '$urlRouterProvider', config])
+    .config(['$stateProvider', '$urlRouterProvider', '$translateProvider', config])
     .run(['$rootScope', '$state', function($rootScope, $state) {
         $rootScope.$state = $state;
     }]);
