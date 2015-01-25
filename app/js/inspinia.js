@@ -1,10 +1,3 @@
-/**
- * INSPINIA - Responsive Admin Theme
- * Copyright 2014 Webapplayers.com
- *
- * Custom scripts
- */
-
 $(document).ready(function () {
 
     // Full height of sidebar

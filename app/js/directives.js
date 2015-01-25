@@ -1,11 +1,4 @@
 /**
- * INSPINIA - Responsive Admin Theme
- * Copyright 2014 Webapplayers.com
- *
- */
-
-
-/**
  * pageTitle - Directive for set Page title - mata title
  */
 function pageTitle($rootScope, $timeout) {
@@ -101,7 +94,7 @@ function minimalizaSidebar($timeout) {
  * Pass all functions into module
  */
 angular
-    .module('inspinia')
+    .module('seinsr')
     .directive('pageTitle', ['$rootScope', '$timeout', pageTitle])
     .directive('sideNavigation', sideNavigation)
     .directive('iboxTools', ['$timeout', iboxTools])

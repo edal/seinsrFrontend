@@ -1,11 +1,4 @@
 /**
- * INSPINIA - Responsive Admin Theme
- * Copyright 2014 Webapplayers.com
- *
- */
-
-
-/**
  * MainCtrl - controller
  */
 function MainCtrl() {
@@ -18,5 +11,5 @@ function MainCtrl() {
 
 
 angular
-    .module('inspinia')
+    .module('seinsr')
     .controller('MainCtrl', MainCtrl)
